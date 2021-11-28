@@ -17,9 +17,10 @@ def get_score(list_cards):
 
     return sum(list_cards)
 
-
+#Get two cards using the function random_card()
 mycards_list = []
 system_list = []
+is_over = False
 
 for item in range(2):
     mycards_list.append(random_card())
@@ -29,7 +30,12 @@ mycards_score = get_score(mycards_list)
 system_score = get_score(system_list)
 
 print(f"The first card of the system is {system_list[0]}")
-print(f"My cards are: {mycards_list} and my socre is {mycards_score}")
+print(f"My cards are: {mycards_list} and my score is {mycards_score}")
+
+if mycards_score == 0 or mycards_score >21 or system_score == 0:
+    is_over = True
+
+
 
 
 
