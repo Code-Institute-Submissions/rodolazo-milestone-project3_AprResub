@@ -69,7 +69,7 @@ def main():
         if mycards_score == 0 or mycards_score >21 or system_score == 0:
             is_over = True
         else:
-            ask_card = input("Type 'y' to get another card or 'n' to finish the game: ").lower()
+            ask_card = input("Type 'y' to get another card or 'n' to finish the game: \n").lower()
             if ask_card == 'y':
                 mycards_list.append(random_card())
             else:
@@ -87,7 +87,7 @@ def main():
 
 
 #Ask to play the game again
-while input("Would you like to play 21 game? <y> or <n>: ").lower() == 'y':
+while input("Would you like to play 21 game? <y> or <n>: \n").lower() == 'y':
     screen_clear()
     print(texto)
     main()
