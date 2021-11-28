@@ -13,7 +13,7 @@ def get_score(list_cards):
 
     if sum(list_cards) > 21 and 11 in list_cards:
         list_cards.remove(11)
-        list_card.append(1)
+        list_cards.append(1)
 
     return sum(list_cards)
 
@@ -23,17 +23,37 @@ system_list = []
 is_over = False
 
 for item in range(2):
-    mycards_list.append(random_card())
+        mycards_list.append(random_card())
+        system_list.append(random_card())
+
+# Let the user to ask for another card and stop the game when is 21 or over
+while not is_over:
+    mycards_score = get_score(mycards_list)
+    system_score = get_score(system_list)
+
+    print(f"The first card of the system is {system_list[0]}")
+    print(f"My cards are: {mycards_list} and my score is {mycards_score}")
+
+    if mycards_score == 0 or mycards_score >21 or system_score == 0:
+        is_over = True
+    else:
+        ask_card = input("Type 'y' to get another card or 'n' to finish the game: ")
+        if ask_card == 'y':
+            mycards_list.append(random_card())
+        else:
+            is_over = True
+
+#If the system score is less than 17 thenhas to deal a new card
+while system_score != 0 and system_score < 17:
     system_list.append(random_card())
+    system_score = get_score(system_list)
 
-mycards_score = get_score(mycards_list)
-system_score = get_score(system_list)
 
-print(f"The first card of the system is {system_list[0]}")
-print(f"My cards are: {mycards_list} and my score is {mycards_score}")
 
-if mycards_score == 0 or mycards_score >21 or system_score == 0:
-    is_over = True
+
+
+
+
 
 
 
