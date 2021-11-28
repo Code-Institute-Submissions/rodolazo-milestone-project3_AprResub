@@ -1,31 +1,18 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# 21 GAME
 
-Welcome USER_NAME,
+Equally well known as Twenty-One, the objective of this game is to attempts to beat the dealer that in this case is going to be the system by getting a count as close to 21 as possible, without going over 21.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## Card values/scoring
+It is up to each individual player if an ace is worth 1 or 11. Face cards are 10 and any other card is its pip value.
 
-## Reminders
+## Betting
+At the beginning of the game the player and the system receive two cards. The first card of the system is visible for the user. After that the program is going to request the user if he wants another card
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Rules
+* If both the system and the user go over 21, the user lose the game
+* If both have the same score , it is a draw
+* If both are below 21 and both have differents scores, The winner is the one with the highest score
 
-## Creating the Heroku app
+## Features
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
