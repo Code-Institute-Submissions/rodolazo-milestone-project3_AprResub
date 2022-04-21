@@ -96,7 +96,7 @@ def main():
 play = True
 while play:
     try:
-        answer = input("Would you like to play 21 game?\
+        answer = input("Would you like to play 21 game? \
            <y> or <n>: \n").lower()
         if answer == 'y':
             screen_clear()
